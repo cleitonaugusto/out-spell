@@ -1,0 +1,18 @@
+[package]
+name = "out-spell"
+version = "0.1.0"
+edition = "2021"
+description = "Try to defeat your agent's guardrail with synonyms: generate semantically-equivalent inputs and flag the ones that get a different decision."
+license = "MIT"
+repository = "https://github.com/cleitonaugusto/out-spell"
+readme = "README.md"
+keywords = ["security", "ai-agents", "guardrail", "fuzzing", "prompt-injection"]
+categories = ["command-line-utilities", "development-tools::testing"]
+
+[[bin]]
+name = "out-spell"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 2
+strip = true
